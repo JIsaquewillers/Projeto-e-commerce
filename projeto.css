@@ -60,13 +60,35 @@ header #carrinhobtn{
     padding: 10px;
     background-color: white;
     display: none ;
+    box-shadow: 10px 10px 10px 6px;
 }
-#cart button{
+#cart h2{
+    margin: 0;
+}
+#cart #botãoCompra{
     width:100px ;
     height: 30px;
     background-color: red;
     margin-top: 530px;
     border:none;
+    cursor: pointer;
+    color:white;
+}
+#cart #botãoCompra:hover{
+    border: 2px solid black;
+}
+#fecharCart{
+    width: 20px;
+    background-color: red;
+    border: none;
+    height: 20px;
+    margin-left: 300px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+#cart #fecharCart:hover{
+    border: 1px solid black;
 }
 
 
