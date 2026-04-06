@@ -12,7 +12,7 @@ const cart = document.getElementById("cart")
 let carrinho = new Array()
 
 
-const produtos = new Array(
+let produtos = new Array(
     { nome: "Ovo de Páscoa laCreme ao Leite 348g", preco: 51 },
     { nome: "Ovo de Páscoa Lacta Sonho de Valsa 277g", preco: 120 }
 )
@@ -40,7 +40,8 @@ fecharCart.addEventListener('click', () =>{
 // evneto de clique no botão de adicionar item, para adiconar o item no carrinho. 
 // carrinhoBTN.array.forEach(button => { button.addEventListener('click',()=> ) } ); //
 buttonADD.forEach(button => {
-     button.addEventListener('click' ,event =>{
+     button.addEventListener('click' ,event =>{ 
+        carrinho.push(produtos)
      }
      ) } ); 
 
