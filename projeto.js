@@ -9,11 +9,12 @@ const carrinhoBTN = document.getElementById("carrinhobtn")
 const fecharCart = document.getElementById('fecharCart')
 const buttonADD = document.querySelectorAll(".botãoadd")
 const cart = document.getElementById("cart")
+const cartUl = document.querySelector('#cart ul')
 let carrinho = new Array()
 
 
 let produtos = new Array(
-    { nome: "Ovo de Páscoa laCreme ao Leite 348g", preco: 51 },
+    { nome: "Ovo de Páscoa laCreme ao Leite 348g", preco: 51, img: "fotos/ovo4.webp" },
     { nome: "Ovo de Páscoa Lacta Sonho de Valsa 277g", preco: 120 }
 )
 
@@ -38,15 +39,36 @@ fecharCart.addEventListener('click', () =>{
 })
    
 // evneto de clique no botão de adicionar item, para adiconar o item no carrinho. 
-// carrinhoBTN.array.forEach(button => { button.addEventListener('click',()=> ) } ); //
-buttonADD.forEach(button => {
-     button.addEventListener('click' ,event =>{ 
-        carrinho.push(produtos)
-     }
-     ) } ); 
+// //
+
+buttonADD.forEach((button, index) => {
+     button.addEventListener('click' ,() => { 
+         const produto = produtos[index]
+
+    carrinho.push(produto)
+    
+    adicionarCart()
+    }
+)})
+
+function adicionarCart(){
+    cartUl.innerHTML = ""
+    carrinho.forEach(item => {
+        const li = document.createElement('li')
+
+        li.innerHTML = `
+            <div class="produtoCart">
+                <img src="${item.img}" width="50">
+                <h3>${item.nome}</h3>
+                <p>R$ ${item.preco.toFixed(2)}</p>
+            </div>
+        `
+
+        cartUl.appendChild(li)
+    })
+}
 
 
-    let total = 0
     
 
 

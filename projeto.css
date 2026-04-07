@@ -91,7 +91,11 @@ header #carrinhobtn{
     border: 1px solid black;
 }
 
-
+.produtoCart{
+    width: 50px;
+    background-color: red;
+    height: 50px;
+}
 /* MAIN */
 main{
     display:flex;
