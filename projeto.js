@@ -1,25 +1,24 @@
-//*abrir carrinho na lateral da página X
-//*adiconar item no carrinho
-//*aparecer o número de produtos no carrinho
-//*somar preço
-
-//declaração de variáveis e array //
-
+//declaração de variáveis //
 const carrinhoBTN = document.getElementById("carrinhobtn")
 const fecharCart = document.getElementById('fecharCart')
 const buttonADD = document.querySelectorAll(".botãoadd")
 const cart = document.getElementById("cart")
 const cartUl = document.querySelector('#cart ul')
-let carrinho = new Array()
 
+//declaração das arrays //
+let carrinho = new Array()
 
 let produtos = new Array(
     { nome: "Ovo de Páscoa laCreme ao Leite 348g", preco: 51, img: "fotos/ovo4.webp" },
-    { nome: "Ovo de Páscoa Lacta Sonho de Valsa 277g", preco: 120 }
+    { nome: "Ovo de Páscoa ao Leite <br> Miau 200g", preco: 51, img: "fotos/ovo5.webp" },
+    { nome: "Ovo de Páscoa laCreme Pistache 348g", preco: 51, img: "fotos/ovo6.webp" },
+    { nome: "Ovo de Páscoa Clássicos ao Leite com Bombons 280g", preco: 51, img: "fotos/ovo7.webp" },
+    { nome: "Ovo de Páscoa laCreme Mezzo 200g", preco: 51, img: "fotos/ovo8.webp" },
+    { nome: "Ovo de Páscoa Ovinhos laCreme Kids 180g", preco: 51, img: "fotos/ovo9.webp" }
 )
 
-
 // evento de clique no botão do carrinho, para abir o carrinho na lateral da página. // 
+ 
 carrinhoBTN.addEventListener('click',() =>{
     
     if( cart.style.display ==='none'){
@@ -38,19 +37,16 @@ fecharCart.addEventListener('click', () =>{
     }
 })
    
-// evneto de clique no botão de adicionar item, para adiconar o item no carrinho. 
-// //
-
-buttonADD.forEach((button, index) => {
-     button.addEventListener('click' ,() => { 
-         const produto = produtos[index]
-
+// evento de clique no botão de adicionar item, para adiconar o item no carrinho. //
+for (let i = 0; i < buttonADD.length; i++) {
+   buttonADD[i].addEventListener('click', () => {
+    const produto = produtos[i]
     carrinho.push(produto)
-    
-    adicionarCart()
-    }
-)})
 
+    adicionarCart()
+   })
+    
+}
 function adicionarCart(){
     cartUl.innerHTML = ""
     carrinho.forEach(item => {
@@ -67,15 +63,10 @@ function adicionarCart(){
         cartUl.appendChild(li)
     })
 }
-
-
     
 
 
     
-
-
-
 
 
 
