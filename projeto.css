@@ -65,9 +65,10 @@ header #carrinhobtn{
 .itemCart{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1px;
+    gap: 15px;
 }
 #cart img{
     width: 100px;
@@ -80,7 +81,6 @@ header #carrinhobtn{
     width:100px ;
     height: 30px;
     background-color: red;
-    margin-top: 120%;
     border:none;
     cursor: pointer;
     color:white;
@@ -102,9 +102,15 @@ header #carrinhobtn{
     border: 1px solid black;
 }
 .produtoCart{
-    width: 50px;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+#listaCarrinho{
+    display: flex;
+    flex-direction: column;
+}
+
 /* MAIN */
 main{
     display:flex;

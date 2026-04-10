@@ -17,6 +17,8 @@ let produtos = new Array(
     { nome: "Ovo de Páscoa Ovinhos laCreme Kids 180g", preco: 51, img: "fotos/ovo9.webp" }
 )
 
+
+
 // evento de clique no botão do carrinho, para abir o carrinho na lateral da página. // 
  
 carrinhoBTN.addEventListener('click',() =>{
@@ -46,7 +48,7 @@ for (let i = 0; i < buttonADD.length; i++) {
     adicionarCart()
    })
     
-}
+}   
 function adicionarCart(){
     cartUl.innerHTML = ""
     carrinho.forEach(item => {
@@ -63,10 +65,10 @@ function adicionarCart(){
         cartUl.appendChild(li)
     })
 }
-    
 
+const contador = document.getElementById('#contador')
 
-    
+function contador 
 
 
 
