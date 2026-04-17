@@ -48,8 +48,17 @@ header #carrinhobtn{
     filter: invert(1);
     cursor: pointer;
 }
-
-
+#contador {
+    margin-left: 1180px;
+    position: relative;
+    display: block;
+    background-color:#ff9800;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
 /*CART*/
 #cart{
     width: 360px;
@@ -61,6 +70,7 @@ header #carrinhobtn{
     background-color: white;
     display: none ;
     box-shadow: 10px 10px 10px 6px;
+    overflow: scroll;
 }
 .itemCart{
     display: flex;
@@ -80,7 +90,7 @@ header #carrinhobtn{
 #cart #botãoCompra{
     width:100px ;
     height: 30px;
-    background-color: red;
+    background: linear-gradient(135deg, #ffb347, #ff9800);
     border:none;
     cursor: pointer;
     color:white;
@@ -90,7 +100,7 @@ header #carrinhobtn{
 }
 #fecharCart{
     width: 20px;
-    background-color: red;
+     background: linear-gradient(135deg, #ffb347, #ff9800);
     border: none;
     height: 20px;
     margin-left: 80%;

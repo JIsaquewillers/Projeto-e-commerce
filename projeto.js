@@ -9,12 +9,12 @@ const cartUl = document.querySelector('#cart ul')
 let carrinho = new Array()
 
 let produtos = new Array(
-    { nome: "Ovo de Páscoa laCreme ao Leite 348g", preco: 51, img: "fotos/ovo4.webp" },
-    { nome: "Ovo de Páscoa ao Leite <br> Miau 200g", preco: 51, img: "fotos/ovo5.webp" },
-    { nome: "Ovo de Páscoa laCreme Pistache 348g", preco: 51, img: "fotos/ovo6.webp" },
-    { nome: "Ovo de Páscoa Clássicos ao Leite com Bombons 280g", preco: 51, img: "fotos/ovo7.webp" },
-    { nome: "Ovo de Páscoa laCreme Mezzo 200g", preco: 51, img: "fotos/ovo8.webp" },
-    { nome: "Ovo de Páscoa Ovinhos laCreme Kids 180g", preco: 51, img: "fotos/ovo9.webp" }
+    { nome: "Ovo de Páscoa laCreme ao Leite 348g", preco: 69.99, img: "fotos/ovo4.webp" },
+    { nome: "Ovo de Páscoa ao Leite <br> Miau 200g", preco: 89.99, img: "fotos/ovo5.webp" },
+    { nome: "Ovo de Páscoa laCreme Pistache 348g", preco: 129.99, img: "fotos/ovo6.webp" },
+    { nome: "Ovo de Páscoa Clássicos ao Leite com Bombons 280g", preco: 99.99, img: "fotos/ovo7.webp" },
+    { nome: "Ovo de Páscoa laCreme Mezzo 200g", preco: 72.99, img: "fotos/ovo8.webp" },
+    { nome: "Ovo de Páscoa Ovinhos laCreme Kids 180g", preco: 54.99, img: "fotos/ovo9.webp" }
 )
 
 
@@ -49,6 +49,8 @@ for (let i = 0; i < buttonADD.length; i++) {
    })
     
 }   
+
+//função para adicionar item no carrinho //
 function adicionarCart(){
     cartUl.innerHTML = ""
     carrinho.forEach(item => {
@@ -63,13 +65,31 @@ function adicionarCart(){
         `
 
         cartUl.appendChild(li)
+
+        soma()
+        contador()
     })
 }
 
-const contador = document.getElementById('#contador')
 
-function contador 
+//função para fazer a soma dos produtos e dar o total //
+function soma (){
+    let soma = 0
+     let resultado = document.querySelector('#resultado')
+     
+    carrinho.forEach(item =>{
+        soma += item.preco
+        
+    })
+     resultado.innerHTML = "Total:"+ "R$" + soma.toFixed(2)
+}
 
+
+//função para mostrar quantos itens estão dentro do carrinho //
+function contador (){
+    let contador = document.querySelector("#contador")
+    contador.innerHTML = carrinho.length
+}
 
 
 
